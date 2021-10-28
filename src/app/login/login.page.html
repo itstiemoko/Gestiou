@@ -1,0 +1,25 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-back-button slot="start"></ion-back-button>
+        <ion-title>Gestiou</ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <form [formGroup]="emailPassword" (ngSubmit)="verifyEmailPass()">
+        <ion-list class="ion-margin">
+            <ion-list-header>
+                <ion-label>Se connecter</ion-label>
+            </ion-list-header>
+            <ion-item class="ion-margin">
+                <ion-input type="email" formControlName="userEmail" placeholder="Entrez votre e-mail..." clearInput="true"></ion-input>
+            </ion-item>
+            <ion-item class="ion-margin">
+                <ion-input type="password" formControlName="userPassword" placeholder="Entrez votre mot de pass..." clearInput="true"></ion-input>
+            </ion-item>
+            <a routerLink="/forgot-password"><p class="ion-text-right">Mot de passe oublié?</p></a>
+            <ion-button type="submit" [disabled]="!emailPassword.valid" expand="block" shape="round" strong="true">Connexion <ion-icon name="log-in"></ion-icon></ion-button>
+        </ion-list>
+    </form>
+</ion-content>
+  

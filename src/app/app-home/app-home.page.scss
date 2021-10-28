@@ -1,0 +1,20 @@
+ion-list
+{
+    transform: translateY(25vh);
+    background: transparent;
+    ion-list-header
+    {
+        margin-bottom: 10vh;
+        ion-label
+        {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+    }
+    ion-button
+    {
+        margin-top: 2vh;
+        font-weight: bold;
+        text-transform: none;
+    }
+}

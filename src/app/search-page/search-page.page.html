@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Recherche</ion-title>
+  </ion-toolbar>
+  <ion-searchbar placeholder="Rechercher des utilisateurs" [(ngModel)]="searchWord"></ion-searchbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngFor="let user of users | filter:searchWord">
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="person" size="large"></ion-icon>
+      </ion-avatar>
+      <ion-label>{{user.userLastName}} {{user.userFirstName}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

@@ -1,0 +1,23 @@
+ion-list
+{
+    margin-top: 20vh;
+    ion-list-header
+    {
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    ion-item
+    {
+        border-radius: 20px;
+        box-shadow: 0 6px 4px -4px;
+    }
+    a
+    {
+        text-decoration: none;
+    }
+    ion-button
+    {
+        margin-top: 5vh;
+        text-transform: none;
+    }
+}

@@ -1,0 +1,23 @@
+<ion-content [fullscreen]="true">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Home</ion-title>
+      <ion-avatar slot="end">
+        <ion-icon name="search" size="large" routerLink="/search-page"></ion-icon>
+      </ion-avatar>
+      <ion-avatar slot="end">
+        <ion-icon name="person" size="large" (click)="goToProfile()"></ion-icon>
+      </ion-avatar>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-list *ngFor="let user of users">
+    <ion-item>
+      <ion-avatar slot="start">
+        <ion-icon name="person" size="large"></ion-icon>
+      </ion-avatar>
+      <ion-label>{{user.userLastName}} {{user.userFirstName}}</ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

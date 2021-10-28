@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <div class="container">
+    <img src="assets/images/profile.png" alt="" width="200">
+  </div>
+  <div class="container">
+    <p><ion-label>{{currentUserData?.userFirstName}} {{currentUserData?.userLastName}}</ion-label></p>
+    <p><ion-label>{{currentUserData?.userEmail}}</ion-label></p>
+  </div>
+  <ion-button (click)="logOut()">Déconnexion</ion-button>
+</ion-content>

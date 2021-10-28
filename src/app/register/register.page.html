@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-back-button slot="start"></ion-back-button>
+    <ion-title>Inscription</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form [formGroup]="userRegistrationData" (ngSubmit)="userRegistration()">
+    <ion-list class="ion-margin">
+        <ion-list-header>
+            <ion-label>Créer votre compte !</ion-label>
+        </ion-list-header>
+        <ion-item class="ion-margin">
+          <ion-input type="text" formControlName="lastname" placeholder="Entrez votre nom..." clearInput="true"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin">
+          <ion-input type="text" formControlName="firstname" placeholder="Entrez votre prénom..." clearInput="true"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin">
+            <ion-input type="email" formControlName="email" placeholder="Entrez votre e-mail..." clearInput="true"></ion-input>
+        </ion-item>
+        <ion-item class="ion-margin">
+            <ion-input type="password" formControlName="password" placeholder="Entrez votre mot de pass..." clearInput="true"></ion-input>
+        </ion-item>
+        <ion-button type="submit" [disabled]="!userRegistrationData.valid" expand="block" shape="round" strong="true">S'inscrire <ion-icon name="log-in"></ion-icon></ion-button>
+    </ion-list>
+  </form>
+</ion-content>
