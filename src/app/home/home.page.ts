@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 
 import { Router } from '@angular/router';
 
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+
 //My Services
 import { ServiceProjectService } from '../MyServices/service-project.service';
 
@@ -13,8 +15,16 @@ import { ServiceProjectService } from '../MyServices/service-project.service';
 export class HomePage {
   users: any
 
-  constructor(private myService: ServiceProjectService, private router: Router)
+  constructor(private myService: ServiceProjectService, private router: Router, private auth: AngularFireAuth)
   {
+    this.auth.authState.subscribe(
+      result => {
+        if(!result)
+        {
+          this.router.navigate(['login'])
+        }
+      }
+    )
     this.getUsersData()
   }
 
