@@ -27,3 +27,5 @@ Firebase
 
 # Lancement
 Pour démarrer le projet, tapez la commande : ionic serve --lab
+
+Voir le dossier Maquette, pour la maquette du projet
